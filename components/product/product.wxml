@@ -1,0 +1,89 @@
+<view class="product" data-id="{{product_id}}" data-block="{{block}}" catchtap="detailTap">
+  <view class="product_top">
+    <view class="product_top_left">
+      <view class="product_top_left_avatar">
+        <image src="{{headImg}}" />
+        <image wx:if="{{authenticationState=='1'}}" class="product_top_left_avatar_rz" src="/images/3.png" />
+      </view>
+      <view class="product_top_left_tit">
+        <view class="product_top_left_tit_top">
+          <view class="product_top_left_tit_top_red" wx:if="{{typeName}}" catchtap="showMoto">{{typeName}}</view>
+          <text class="product_top_left_tit_top_black">{{name}}</text>
+        </view>
+        <view class="product_top_left_tit_bottom">{{date}}</view>
+      </view>
+    </view>
+    <view class="product_top_right" data-tel="{{mobile}}" catchtap="telTap">
+      <view class="product_top_right_img">
+        <image src="/images/tel.png" />
+      </view>
+      <text>拨打电话</text>
+    </view>
+  </view>
+  <view class="product_filter">
+    <view class="product_filter_item" wx:for="{{itemList}}" wx:key="*">{{item}}</view>
+  </view>
+  <view class="product_special">{{describe}}</view>
+  <view class="product_item">
+    <view class="product_item_key">联系电话：</view>
+    <view class="product_item_value">{{mobile}}</view>
+  </view>
+  <view class="product_item" wx:if="{{block==1&&salaryName}}">
+    <view class="product_item_key">薪资范围：</view>
+    <view class="product_item_value">{{salaryName}}</view>
+  </view>
+  <view class="product_item" wx:if="{{block==1&&positionName}}">
+    <view class="product_item_key">招聘职位：</view>
+    <view class="product_item_value">{{positionName}}</view>
+  </view>
+  <view class="product_item" wx:if="{{block==2&&acreage}}">
+    <view class="product_item_key">房屋面积：</view>
+    <view class="product_item_value">{{acreage}}平方米</view>
+  </view>
+  <view class="product_item" wx:if="{{block==2&&sellPrice}}">
+    <view class="product_item_key">房屋价格：</view>
+    <view class="product_item_value">{{sellPrice}}万元</view>
+  </view>
+  <view class="product_item" wx:if="{{block==2&&houseDecorationTypeName}}">
+    <view class="product_item_key">房屋装修：</view>
+    <view class="product_item_value">{{houseDecorationTypeName}}</view>
+  </view>
+  <view class="product_item" wx:if="{{block==2&&bedroomCount}}">
+    <view class="product_item_key">房屋格局：</view>
+    <view class="product_item_value">{{bedroomCount}}室{{parlourCount}}厅{{toiletCount}}卫</view>
+  </view>
+  <view class="product_item" wx:if="{{block==2&&location}}">
+    <view class="product_item_key">位置：</view>
+    <view class="product_item_value">{{location}}</view>
+  </view>
+  <view class="product_item" wx:if="{{departurePlace}}">
+    <view class="product_item_key">出发地：</view>
+    <view class="product_item_value">{{departurePlace}}</view>
+  </view>
+  <view class="product_item" wx:if="{{destination}}">
+    <view class="product_item_key">目的地：</view>
+    <view class="product_item_value">{{destination}}</view>
+  </view>
+  <view class="product_item" wx:if="{{rideCount}}">
+    <view class="product_item_key">乘车人数：</view>
+    <view class="product_item_value">{{rideCount}}</view>
+  </view>
+  <view class="product_item" wx:if="{{rideTime}}">
+    <view class="product_item_key">乘车时间：</view>
+    <view class="product_item_value">{{rideTime}}</view>
+  </view>
+  <view class="product_img_wrapper">
+    <view class="product_img_wrapper_item" wx:for="{{imageList}}" wx:key="*">
+      <image src="{{item}}" data-index="{{index}}" catchtap="imgTap"/>
+    </view>
+  </view>
+  <!-- 顶置 -->
+  <image class="dingzhi" wx:if="{{stickState==1}}" src="/images/top.png" />
+  <!-- 顶置 -->
+</view>
+<view class="product_bottom">
+  <look clickRate="{{clickRate}}"></look>
+  <praise likeCount="{{likeCount}}" isLike="{{isLike}}" productId="{{product_id}}" block="{{block}}"></praise>
+  <collection isColletion="{{isColletion}}" productId="{{product_id}}" block="{{block}}" bind:myevent="tt"></collection>
+  <share block="{{block}}" pruduct_id="{{product_id}}"  data-id="{{product_id}}" data-block="{{block}}" catchtap="shareTap"></share>
+</view>

@@ -1,0 +1,79 @@
+.carpool_top{
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding-bottom: 20rpx;
+}
+.carpool_add{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100rpx;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+.picker{
+  font-size: 32rpx;
+  color: #999;
+  width: 300rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.carpool_add image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.carpool_top_line{
+  width: 100%;
+  height: 1px;
+  background-color: #EFEFEF;
+  transform: scaleY(0.5);
+}
+.carpool_time{
+  height: 100rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40rpx;
+  box-sizing: border-box;
+}
+.carpool_time image{
+  height: 34rpx;
+  width: 34rpx;
+}
+
+.carpool_filter{
+  height: 100rpx;
+  background-color: #fff;
+  width: 100%;
+  padding: 0 80rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.carpool_filter_item{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30rpx;
+  color: #333;
+  height: 100%;
+}
+.carpool_filter_item_cur{
+  background-color: #FF552F;
+  color: #fff;
+}
+.carpool_list{
+  padding-bottom: 140rpx;
+}
+
+.carpool_top button{
+  background-color: #FF552F;
+  color: #fff;
+  width: 90%;
+  margin: 10rpx auto;
+  font-size: 26rpx;
+}

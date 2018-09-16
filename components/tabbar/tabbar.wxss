@@ -1,0 +1,42 @@
+.tabbar{
+  height: 110rpx;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  box-shadow: 0 -2px 5px rgb(228, 225, 225);  
+}
+.tabbar .cur text{
+  color: #FF552E;
+}
+.tabbar_item{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.tabbar_item image{
+  width: 61rpx;
+  height: 61rpx;
+}
+.tabbar_item text{
+  font-size: 26rpx;
+  color: #333;
+}
+.tabbar_item:nth-child(2){
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 6rpx;
+}
+.tabbar_item:nth-child(2) image{
+  width: 110rpx;
+  height: 110rpx;
+}
+.tabbar_item:nth-child(1){
+  margin-right: 200rpx;
+}

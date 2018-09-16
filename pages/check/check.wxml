@@ -1,0 +1,30 @@
+<view class="check">
+    <scroll-view scroll-x class="check_tab" scroll-with-animation scroll-left="{{scrollleft}}">
+        <view class="check_tab_item" wx:for="{{tabList}}" wx:key="*" catchtap="tabTap" data-index="{{index}}">
+            <view class="check_tab_item_wrapper {{_num==index?'check_tab_item_wrapper_cur':''}}">{{item.text}}</view>
+        </view>
+    </scroll-view>
+    <view class="check_list">
+        <view class="check_item" wx:for="{{list}}" wx:key="*" data-id="{{item.id}}" data-block="{{block}}" catchtap="detailTap">
+            <view class="check_item_tit">
+                <view class="check_item_tit_left">发布时间：{{item.date}}</view>
+                <view class="check_item_tit_right">
+                    <text catchtap="deletTap" data-id="{{item.id}}">删除</text>
+                    <!-- <text class="orange">未通过</text> -->
+                </view>
+            </view>
+            <view class="check_item_content">
+                <view class="check_item_content_info">{{item.describe}}</view>
+                <view class="check_item_content_img_list" wx:if="{{item.imgUrl!==''}}">
+                    <view class="check_item_content_img">
+                        <image src="{{item.imgUrl}}"></image>
+                    </view>
+                </view>
+            </view>
+            <!-- <view class="check_item_btn">
+                <button>重新编辑</button>
+            </view> -->
+        </view>
+    </view>
+    <more></more>
+</view>

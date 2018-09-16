@@ -1,0 +1,35 @@
+<view>
+    <view class="info_item">
+        <view class="info_left">头像</view>
+        <view class="info_right">
+            <view></view>
+            <image class="avatar" src="{{headImg}}" />
+        </view>
+    </view>
+    <view class="info_item">
+        <view class="info_left">昵称</view>
+        <view class="info_right">
+            <input type="text" value="{{nickname}}" bindinput="nameTap" />
+            <image class="right" src="/images/right.png" />
+        </view>
+    </view>
+    <picker bindchange="bindPickerChange" value="{{sexIndex}}" range="{{sexArr}}">
+        <view class="info_item">
+            <view class="info_left">性别</view>
+            <view class="info_right">
+                <text>{{sexArr[sexIndex]}}</text>
+                <image class="right" src="/images/right.png" />
+            </view>
+        </view>
+    </picker>
+    <picker mode="date" value="{{date}}" start="" end="" bindchange="bindDateChange">
+        <view class="info_item">
+            <view class="info_left">生日</view>
+            <view class="info_right">
+                <text>{{birthday}}</text>
+                <image class="right" src="/images/right.png" />
+            </view>
+        </view>
+    </picker>
+    <button class="edit" catchtap="editTap">保存</button>
+</view>

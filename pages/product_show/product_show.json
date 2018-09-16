@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "详情",
+  "usingComponents": {
+    "search": "../../components/search/search",
+    "product": "../../components/product/product",
+    "more": "../../components/more/more",
+    "tabbar": "../../components/tabbar/tabbar"
+  }
+}

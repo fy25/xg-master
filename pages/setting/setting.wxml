@@ -1,0 +1,27 @@
+<view class="setting">
+    <button class="setting_item" open-type="share">
+        <view class="setting_left">告诉朋友</view>
+        <view class="setting_right">
+            <image class="share" src="/images/share2.png" />
+        </view>
+    </button>
+    <view class="setting_item" catchtap="helpTap">
+        <view class="setting_left">使用帮助</view>
+        <view class="setting_right">
+            <image src="/images/right.png" />
+        </view>
+    </view>
+    <view class="setting_item" catchtap="webTap" data-id="2">
+        <view class="setting_left">用户协议</view>
+        <view class="setting_right">
+            <image src="/images/right.png" />
+        </view>
+    </view>
+    <view class="setting_item" catchtap="webTap" data-id="1">
+        <view class="setting_left">关于我们</view>
+        <view class="setting_right">
+            <image src="/images/right.png" />
+        </view>
+    </view>
+    <button class="btn" catchtap="logout">退出当前用户</button>
+</view>

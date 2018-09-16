@@ -1,0 +1,27 @@
+page{
+  background-color: #EFEFEF;
+}
+.index_dynamic{
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+.index_dynamic_tit{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.index_dynamic_tit_black{
+  color: #333;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.index_dynamic_tit_more{
+  color: #FF552E;
+  font-size: 24rpx;
+}
+.index_dynamic_list{
+  padding: 0 30rpx 1rpx 30rpx;
+  box-sizing: border-box;
+}

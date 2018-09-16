@@ -1,0 +1,28 @@
+<view class="product_list">
+  <search bind:myevent="filterTap"></search>
+  <!-- 热门搜索开始 -->
+  <view class="hot_search" hidden="{{block=='1'}}">
+    <view class="hot_search_list">
+      <view class="hot_search_item" wx:for="{{keyList}}" wx:key="*" data-key="{{item.name}}" catchtap="keyTap">
+        <view class="hot_search_item_wrapper">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="hot_search" wx:if="{{block=='1'}}">
+    <view class="hot_search_list">
+      <view class="hot_search_item" wx:for="{{positionList}}" wx:key="*" data-id="{{item.id}}" catchtap="PositionTap">
+        <view class="hot_search_item_wrapper">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 热门搜索结束 -->
+  <view class="product_list_wrapper">
+    <product wx:for="{{productList}}" wx:key="*" likeCount="{{item.likeCount}}" isLike="{{item.isLike}}" mobile="{{item.mobile}}"
+      isColletion="{{item.isColletion}}" isLike="{{item.isLike}}" block="{{block}}" headImg="{{item.headImg}}" typeName="{{item.typeName}}"
+      name="{{item.name}}" date="{{item.date}}" itemList="{{item.itemList}}" describe="{{item.describe}}" mobile="{{item.mobile}}"
+      imageList="{{item.imageList}}" stickState="{{item.stickState}}" clickRate="{{item.clickRate}}" salaryName="{{item.salaryName}}"
+      positionName="{{item.positionName}}" product_id="{{item.id}}"></product>
+    <more></more>
+  </view>
+</view>
+<tabbar path="{{path}}"></tabbar>

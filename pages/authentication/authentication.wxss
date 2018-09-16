@@ -1,0 +1,59 @@
+/* pages/forget/forget.wxss */
+.forget{
+  padding: 40rpx 38rpx;
+  box-sizing: border-box;
+}
+.forget_item{
+  width: 100%;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 90rpx;
+  padding: 0 12rpx 0 26rpx;
+  box-sizing: border-box;
+  margin-bottom: 20rpx;
+}
+.forget_item_left{
+  display: flex;
+  align-items: center;
+}
+.forget_item_left text{
+  font-size: 30rpx;
+  color: #333;
+  margin-right: 35rpx;
+}
+.forget_item_left input{
+  font-size: 30rpx;
+  color: #333;
+  width: 400rpx;
+}
+.placeholder{
+  color: #999;
+}
+.forget_item_right{
+  display: flex;
+  align-items: center;
+  /* padding: 15rpx; */
+  box-sizing: border-box;
+}
+.forget_item_right button{
+  font-size: 26rpx;
+  color: #fff;
+  background-color: #FF552E;
+  /* padding: 10rpx 20rpx;
+  line-height: 1; */
+}
+.forget_tips{
+  font-size: 20rpx;
+  margin-bottom: 20rpx;
+  color: #CCCCCC;
+}
+.forget_btn{
+  height: 90rpx;
+  line-height: 90rpx;
+  background-color: #FF552E;
+  font-size: 36rpx;
+  color: #fff;
+  margin-top: 30rpx;
+}

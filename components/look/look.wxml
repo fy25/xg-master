@@ -1,0 +1,4 @@
+<view class="look">
+  <image src="/images/view.png" />
+  <text>{{clickRate}}</text>
+</view>

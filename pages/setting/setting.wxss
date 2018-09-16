@@ -1,0 +1,32 @@
+/* pages/feedback/feedback.wxss */
+.setting{
+    margin-top: 20rpx;
+}
+.setting_item{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 28rpx;
+    color: #444;
+    padding: 24rpx;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eeeeee;
+    background-color: #fff;
+    line-height:1;
+}
+.btn{
+    width: 90%;
+    background-color: #FF552E;
+    color: #fff;
+    font-size: 28rpx;
+    margin: 40rpx auto;
+}
+.setting_right image{
+    width: 30rpx;
+    height: 30rpx;
+}
+.setting_right .share{
+    width: 40rpx;
+    height: 40rpx;
+}

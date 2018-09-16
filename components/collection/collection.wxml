@@ -1,0 +1,10 @@
+<view catchtap="collectionTap">
+  <view class="collection" hidden="{{isColletion=='1'}}">
+    <image src="/images/star.png" />
+    <text>收藏</text>
+  </view>
+  <view class="collection" hidden="{{isColletion=='0'}}">
+    <image src="/images/star_cur.png" />
+    <text>取消收藏</text>
+  </view>
+</view>

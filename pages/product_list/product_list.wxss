@@ -1,0 +1,36 @@
+page{
+  background-color: #EFEFEF;
+}
+.hot_search{
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 35rpx 20rpx;
+  box-sizing: border-box;
+}
+.hot_search_tit{
+  font-size: 36rpx;
+  color: #333;
+  margin-bottom: 10rpx;
+}
+.hot_search_list{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.hot_search_item{
+  padding: 8rpx 8rpx;
+  box-sizing: border-box;
+}
+.hot_search_item_wrapper{
+  font-size: 24rpx;
+  color: #999;
+  border: 1px solid #DDDDDD;
+  border-radius: 30px;
+  padding: 8rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.product_list_wrapper{
+  margin-top: 20rpx;
+  padding-bottom: 140rpx;
+}

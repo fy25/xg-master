@@ -1,0 +1,28 @@
+<view class="forget">
+  <view class="forget_item">
+    <view class="forget_item_left">
+      <text>姓名</text>
+      <input type="text" placeholder-class="placeholder" value="{{authenticationState=='1'?trueName:''}}" placeholder="请输入真实姓名"
+        bindinput="nameTap" />
+    </view>
+    <view class="forget_item_right">
+    </view>
+  </view>
+  <view class="forget_item">
+    <view class="forget_item_left">
+      <text>职工号</text>
+      <input type="text" placeholder-class="placeholder" value="{{authenticationState=='1'?number:''}}" placeholder="请输入职工号" bindinput="numberTap" />
+    </view>
+    <view class="forget_item_right">
+    </view>
+  </view>
+  <view class="forget_item">
+    <view class="forget_item_left">
+      <text>部门</text>
+      <input type="text" placeholder-class="placeholder" value="{{authenticationState=='1'?department:''}}" placeholder="请输入部门" bindinput="departmentTap" />
+    </view>
+    <view class="forget_item_right">
+    </view>
+  </view>
+  <button class="forget_btn" catchtap="commitTap" hidden="{{authenticationState=='1'}}">完成认证</button>
+</view>

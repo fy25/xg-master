@@ -1,0 +1,17 @@
+.praise{
+  display: flex;
+  align-items: center;
+}
+.praise image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 10rpx;
+}
+.praise text{
+  font-size: 26rpx;
+  color: #999;
+}
+
+.praise_cur text{
+  color: #FF552E;
+}

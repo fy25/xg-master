@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "徐钢生活圈",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "dynamic": "../../components/dynamic/dynamic",
+    "product": "../../components/product/product",
+    "more": "../../components/more/more",
+    "tabbar": "../../components/tabbar/tabbar"
+  }
+}

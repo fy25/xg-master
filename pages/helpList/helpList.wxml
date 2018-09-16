@@ -1,0 +1,3 @@
+<view class="help">
+    <view class="item" wx:for="{{list}}" wx:key="index" data-id="{{item.id}}" catchtap="detailTap">{{item.title}}</view>
+</view>

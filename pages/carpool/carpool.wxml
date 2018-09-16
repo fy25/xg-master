@@ -1,0 +1,39 @@
+<view class="carpool">
+  <view class="carpool_top">
+    <view class="carpool_add">
+      <view class="picker" catchtap="departureTap">
+        <text hidden="{{chu}}">出发地</text>
+        <text>{{departurePlace}}</text>
+      </view>
+      <image src="/images/exchange.png" />
+      <view class="picker" catchtap="destinationTap">
+        <text hidden="{{mu}}">目的地</text>
+        <text>{{destination}}</text>
+      </view>
+    </view>
+    <view class="carpool_top_line"></view>
+    <view class="carpool_time">
+      <picker mode="date" value="{{date}}" start="" end="" bindchange="bindDateChange">
+        <view class="picker">
+          {{date}}
+        </view>
+      </picker>
+      <image src="/images/right.png"></image>
+    </view>
+    <button catchtap="getList">开始搜索</button>
+  </view>
+  <!-- 筛选开始 -->
+  <view class="carpool_filter">
+    <view class="carpool_filter_item {{_num==index?'carpool_filter_item_cur':''}}" wx:for="{{tabList}}" wx:key="*" data-index="{{index}}"
+      catchtap="tabTap">{{item.text}}</view>
+  </view>
+  <!-- 筛选结束 -->
+  <view class="carpool_list">
+    <product wx:for="{{productList}}" wx:key="*" isColletion="{{item.isColletion}}" isLike="{{item.isLike}}" likeCount="{{item.likeCount}}"
+      block="{{block}}" headImg="{{item.headImg}}" typeName="{{item.typeName}}" name="{{item.name}}" date="{{item.date}}" itemList="{{item.itemList}}"
+      describe="{{item.describe}}" mobile="{{item.mobile}}" imageList="{{item.imageList}}" stickState="{{item.stickState}}"
+      clickRate="{{item.clickRate}}" salaryName="{{item.salaryName}}" positionName="{{item.positionName}}" product_id="{{item.id}}"></product>
+      <more></more>
+  </view>
+</view>
+<tabbar path="{{path}}"></tabbar>

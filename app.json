@@ -1,0 +1,41 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/release/release",
+    "pages/login/login",
+    "pages/recruitRelease/recruitRelease",
+    "pages/personal/personal",
+    "pages/sign_up/sign_up",
+    "pages/release_main/release_main",
+    "pages/check/check",
+    "pages/forget/forget",
+    "pages/logs/logs",
+    "pages/search/search",
+    "pages/dynamic/dynamic",
+    "pages/product_list/product_list",
+    "pages/product_show/product_show",
+    "pages/carpool/carpool",
+    "pages/dynamic_show/dynamic_show",
+    "pages/sellRelease/sellRelease",
+    "pages/secondRelease/secondRelease",
+    "pages/cateRelease/cateRelease",
+    "pages/hitchRelease/hitchRelease",
+    "pages/enterRelease/enterRelease",
+    "pages/lifeRelease/lifeRelease",
+    "pages/collection/collection",
+    "pages/myInfo/myInfo",
+    "pages/feedback/feedback",
+    "pages/setting/setting",
+    "pages/web/web",
+    "pages/helpList/helpList",
+    "pages/bannerWeb/bannerWeb",
+    "pages/authentication/authentication"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FF552E",
+    "navigationBarTitleText": "徐钢生活圈",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#FF552E"
+  }
+}

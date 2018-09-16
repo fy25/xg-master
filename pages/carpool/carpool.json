@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "顺风拼车",
+  "usingComponents": {
+    "product": "../../components/product/product",
+    "more": "../../components/more/more",
+    "tabbar": "../../components/tabbar/tabbar"
+  }
+}

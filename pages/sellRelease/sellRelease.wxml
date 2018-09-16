@@ -1,0 +1,118 @@
+<view class="release_main">
+  <view wx:if="{{type=='0'||type=='1'}}" class="release_main_item">
+    <view class="release_main_item_left">
+      <text>房屋面积</text>
+      <input type="number" maxlength="11" placeholder="请输入房屋面积" bindinput="acreageTap" />
+      <text class="short">平方米</text>
+    </view>
+    <view class="release_main_item_right">
+    </view>
+  </view>
+  <view wx:if="{{type=='0'||type=='1'}}" class="release_main_item">
+    <view class="release_main_item_left">
+      <text>户型</text>
+      <input class="sinput" type="number" maxlength="2" placeholder="几" bindinput="bedroomCountTap" /><text class="short">室</text>
+      <input class="sinput" type="number" maxlength="2" placeholder="几" bindinput="parlourCountTap" /><text class="short">厅</text>
+      <input class="sinput" type="number" maxlength="2" placeholder="几" bindinput="toiletCountTap" /><text class="short">卫</text>
+    </view>
+    <view class="release_main_item_right">
+    </view>
+  </view>
+  <view wx:if="{{type=='0'||type=='1'}}" class="release_main_item">
+    <view class="release_main_item_left">
+      <text wx:if="{{type=='0'}}">房屋总价</text>
+      <text wx:if="{{type=='1'}}">租金价格</text>
+      <input type="number" maxlength="11" placeholder="{{type=='0'?'（单位：万元）':'（单位：元）'}}" bindinput="sellPriceTap" />
+    </view>
+    <view class="release_main_item_right">
+    </view>
+  </view>
+  <view wx:if="{{type=='0'||type=='1'}}" class="release_main_item">
+    <view class="release_main_item_left">
+      <text>小区位置</text>
+      <input type="text" placeholder="小区或单位名称" bindinput="locationTap" />
+    </view>
+    <view class="release_main_item_right">
+    </view>
+  </view>
+  <picker wx:if="{{type=='0'||type=='1'}}" bindchange="changeDecoration" value="{{decorationIndex}}" range="{{decorationText}}">
+    <view class="release_main_item">
+      <view class="release_main_item_left">
+        <text>装修情况</text>
+        <text>{{decorationText[decorationIndex]}}</text>
+      </view>
+      <view class="release_main_item_right">
+        <image src="/images/right.png"></image>
+      </view>
+    </view>
+  </picker>
+  <view class="description">
+    <view wx:if="{{type=='0'}}" class="description_tit">备注</view>
+    <view wx:if="{{type=='1'}}" class="description_tit">备注</view>
+    <view wx:if="{{type=='2'}}" class="description_tit">求租房屋</view>
+    <view wx:if="{{type=='3'}}" class="description_tit">求购房屋</view>
+    <view class="description_wrapper">
+      <textarea wx:if="{{type=='0'}}" maxlength="500" placeholder="请简要说明房屋交通及周边配置等信息，为了保护隐私，请不要填写手机或QQ" bindinput="describeTap"></textarea>
+      <textarea wx:if="{{type=='1'}}" maxlength="500" placeholder="请简要说明房屋交通及周边配置等信息，为了保护隐私，请不要填写手机或QQ" bindinput="describeTap"></textarea>
+      <textarea wx:if="{{type=='2'}}" maxlength="500" placeholder="请说明户型、面积、位置、产权、价格等要求，为了保护隐私，请不要填写手机或QQ" bindinput="describeTap"></textarea>
+      <textarea wx:if="{{type=='3'}}" maxlength="500" placeholder="请说明户型、面积、位置、产权、价格等要求，为了保护隐私，请不要填写手机或QQ" bindinput="describeTap"></textarea>
+    </view>
+  </view>
+  <view class="release_main_item_two" wx:if="{{type=='0'}}">
+    <view class="release_main_item_left">
+      <text>附加</text>
+      <checkbox-group class="checkbox" bindchange="luminousChange">
+        <label class="checkbox" wx:for="{{luminousItemList}}" wx:key="*">
+          <checkbox value="{{item.id}}" checked="{{item.checked}}" />{{item.name}}
+        </label>
+      </checkbox-group>
+    </view>
+  </view>
+  <!-- 上传照片开始 -->
+  <view wx:if="{{type=='0'||type=='1'}}" class="upload_pic">
+    <view class="upload_pic_list">
+      <view class="upload_pic_item" wx:for="{{tempFilePaths}}" wx:key="*">
+        <image src="{{item}}" />
+        <image class="deleimg" data-index="{{index}}" src="/images/clear.png" catchtap="delTap" />
+      </view>
+      <view class="upload_pic_item" hidden="{{len==9}}" catchtap="imgTap">
+        <image src="/images/camera.png" />
+      </view>
+    </view>
+    <view class="upload_pic_list">
+      <text>添加照片，最多9张</text>
+    </view>
+  </view>
+  <!-- 上传照片结束 -->
+  <view class="release_main_item">
+    <view class="release_main_item_left">
+      <text>联系人</text>
+      <input type="text" placeholder="请输入联系人姓名" bindinput="nameTap" />
+    </view>
+    <view class="release_main_item_right">
+    </view>
+  </view>
+  <view class="release_main_item">
+    <view class="release_main_item_left">
+      <text>电话</text>
+      <input type="number" maxlength="11" placeholder="请输入联系人电话" bindinput="telTap" />
+    </view>
+    <view class="release_main_item_right">
+    </view>
+  </view>
+  <view class="release_tk" catchtap="readTap">
+    <view class="release_tk_left">发布条款</view>
+    <view class="release_tk_right">
+      <image src="/images/right-f_cur.png" hidden="{{!read}}" />
+      <view class="release_tk_right_circle" hidden="{{read}}"></view>
+      <text class="release_tk_right_admin">已阅读，并同意</text>
+      <text class="release_tk_right_info" catchtap="xzTap">【发布须知】</text>
+    </view>
+  </view>
+  <view class="release_main_bottom">
+    <view class="release_main_bottom_tips orange">禁止远程办公、网赚、网络兼职、微商、刷单在此栏目发布，否则一概删除！</view>
+    <view class="release_main_bottom_btn">
+      <button catchtap="submitTap" disabled="{{!read}}">立即发布</button>
+    </view>
+  </view>
+</view>

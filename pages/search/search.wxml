@@ -1,0 +1,27 @@
+<view class="search">
+  <!-- 搜索栏开始 -->
+  <view class="index_search" catchtap="goWhere" data-path="../search/search">
+    <view class="index_search_wrapper_filter">
+      <icon type="search" color="#999999" size="15" />
+      <input placeholder="找工作 找房子 找服务" type="text" bindconfirm="filterTap" value="{{key}}" />
+    </view>
+  </view>
+  <!-- 搜索栏结束 -->
+  <!-- 热门搜索开始 -->
+  <view class="hot_search">
+    <view class="hot_search_tit">热门搜索</view>
+    <view class="hot_search_list">
+      <view class="hot_search_item" wx:for="{{keyList}}" wx:key="*" data-key="{{item.name}}" catchtap="keyTap">
+        <view class="hot_search_item_wrapper">{{item.name}}</view>
+      </view>
+    </view>
+  </view>
+  <!-- 热门搜索结束 -->
+  <view class="product_list_wrapper">
+    <product wx:for="{{productList}}" wx:key="*" likeCount="{{item.likeCount}}" isLike="{{item.isLike}}" mobile="{{item.mobile}}"
+      isColletion="{{item.isColletion}}" isLike="{{item.isLike}}" block="{{item.block}}" headImg="{{item.headImg}}" typeName="{{item.typeName}}"
+      name="{{item.name}}" date="{{item.date}}" itemList="{{item.itemList}}" describe="{{item.describe}}" mobile="{{item.mobile}}"
+      imageList="{{item.imageList}}" stickState="{{item.stickState}}" clickRate="{{item.clickRate}}" salaryName="{{item.salaryName}}"
+      positionName="{{item.positionName}}" product_id="{{item.id}}"></product>
+  </view>
+</view>

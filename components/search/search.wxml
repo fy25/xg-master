@@ -1,0 +1,12 @@
+<!-- 搜索栏开始 -->
+<view class="index_search" catchtap="goWhere" data-path="../search/search">
+  <picker wx:if="{{filter=='1'}}" bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+    <view class="picker">{{array[index]}}</view>
+  </picker>
+  <image wx:if="{{filter=='1'}}" src="/images/down.png" />
+  <view class="{{filter=='1'?'index_search_wrapper_filter':'index_search_wrapper'}}">
+    <icon type="search" color="#999999" size="15" />
+    <input placeholder="找工作 找房子 找服务" type="text" confirm-type="search" bindconfirm="searchTap" />
+  </view>
+</view>
+<!-- 搜索栏结束 -->

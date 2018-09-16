@@ -1,0 +1,43 @@
+/* components/dynamic/dynamic.wxss */
+.dynamic{
+  display: flex;
+  align-items: center;
+  margin-bottom: 35rpx;
+}
+.dynamic>image{
+  width: 300rpx;
+  height: 170rpx;
+  border-radius: 15rpx;
+  margin-right: 20rpx;
+}
+.dynamic_info{
+  display: flex;
+  flex-direction: column;
+  height: 170rpx;
+  justify-content: space-between;
+  width: 350rpx;
+}
+.dynamic_tit{
+  font-size: 28rpx;
+  color: #333;
+  /* font-weight: 700; */
+}
+.dynamic_bottom{
+  display: flex;
+  justify-content: space-between;
+}
+.dynamic_bottom>view{
+  font-size: 24rpx;
+  color: #999;
+}
+.dynamic_view{
+  display: flex;
+  align-items: center;
+  font-size: 24rpx;
+  color: #999;
+}
+.dynamic_view image{
+  width: 28rpx;
+  height: 19rpx;
+  margin-right: 10rpx;
+}

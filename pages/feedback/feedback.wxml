@@ -1,0 +1,27 @@
+<view class="feedback">
+    <view class="feedback_item">
+        <view class="feedback_item_left">姓名</view>
+        <view class="feedback_item_right">
+            <input type="text" bindinput="nameTap" />
+        </view>
+    </view>
+    <view class="feedback_item">
+        <view class="feedback_item_left">电话</view>
+        <view class="feedback_item_right">
+            <input type="number" maxlength="11" bindinput="mobileTap" />
+        </view>
+    </view>
+    <view class="feedback_item">
+        <view class="feedback_item_left">标题</view>
+        <view class="feedback_item_right">
+            <input type="text" bindinput="titleTap" />
+        </view>
+    </view>
+    <view class="feedback_item">
+        <view class="feedback_item_left">内容</view>
+        <view class="feedback_item_right">
+            <textarea bindinput="contentTap"></textarea>
+        </view>
+    </view>
+    <button class="btn" catchtap="submit">立即提交</button>
+</view>

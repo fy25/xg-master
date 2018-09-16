@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "发布中心",
+  "usingComponents": {
+    "tabbar": "../../components/tabbar/tabbar"
+  }
+}

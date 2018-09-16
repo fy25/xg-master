@@ -1,0 +1,10 @@
+<view class="release_container">
+  <view class="release_item" catchtap="recruitTap">招聘求职</view>
+  <view class="release_item" catchtap="sellTap">房屋租售</view>
+  <view class="release_item" catchtap="secondTap">二手市场</view>
+  <view class="release_item" catchtap="cateTap">餐饮美食</view>
+  <view class="release_item" catchtap="hitchTap">顺风拼车</view>
+  <view class="release_item" catchtap="enterTap">休闲娱乐</view>
+  <view class="release_item" catchtap="lifeTap">生活服务</view>
+</view>
+<tabbar path="{{path}}"></tabbar>

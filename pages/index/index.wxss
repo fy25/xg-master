@@ -1,0 +1,142 @@
+/**index.wxss**/
+page{
+  background-color: #EFEFEF;
+}
+.container{
+  padding-bottom: 200rpx;
+}
+.index_search{
+  background-color: #FF552E;
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.index_search_wrapper{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  font-size: 24rpx;
+  color: #999;
+  width:100%;
+  padding: 10rpx 25rpx;
+}
+.index_search_wrapper icon{
+  margin-right: 15rpx;
+}
+.index_search_wrapper input{
+  width: 570rpx;
+}
+.banner{
+  width: 100%;
+  padding: 20rpx;
+  box-sizing: border-box;
+}
+.banner_wrapper{
+  width: 100%;
+  height: 290rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+.banner_wrapper swiper,.banner_wrapper swiper-item,.banner_wrapper swiper image{
+  width: 100%;
+  height: 100%;
+}
+
+.tab{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 420rpx;
+}
+.tab_item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 0 0 25%;
+}
+.tab_item image{
+  width: 120rpx;
+  height: 120rpx;
+}
+.tab_item text{
+  font-size: 26rpx;
+  color: #333;
+  margin-top: 16rpx;
+}
+
+.index_dynamic{
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+.index_dynamic_tit{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30rpx;
+  box-sizing: border-box;
+}
+.index_dynamic_tit_black{
+  color: #333;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.index_dynamic_tit_more{
+  color: #FF552E;
+  font-size: 24rpx;
+}
+.index_dynamic_list{
+  padding: 0 30rpx 1rpx 30rpx;
+  box-sizing: border-box;
+}
+.index_ad{
+  width: 100%;
+  height: 260rpx;
+  margin-top: 20rpx;
+}
+.index_ad image{
+  width: 100%;
+  height: 100%;
+}
+
+.index_product{
+  margin-top: 20rpx;
+}
+.index_product_filter{
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+  box-sizing: border-box;
+  justify-content: space-around;
+  margin-bottom: 1px;
+}
+.index_product_filter_line{
+  width: 1px;
+  height: 96rpx;
+  background-color: #EFEFEF;
+}
+.picker{
+  display: flex;
+  align-items: center;
+}
+.picker text{
+  font-size: 36rpx;
+  color: #999;
+  margin-right: 30rpx;
+}
+.picker image{
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.more{
+  font-size: 24rpx;
+  color: #999999;
+  text-align: center;
+  padding: 16rpx 0;
+}

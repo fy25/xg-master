@@ -1,0 +1,26 @@
+<view class="tabbar">
+  <view class="tabbar_item cur" wx:if="{{path=='pages/index/index'}}">
+    <image src="/images/home_cur.png" />
+    <text>首页</text>
+  </view>
+  <view class="tabbar_item" wx:else catchtap="homeTap">
+    <image src="/images/home.png" />
+    <text>首页</text>
+  </view>
+  <view class="tabbar_item cur" wx:if="{{path=='pages/release/release'}}">
+    <image src="/images/release.png" />
+    <text>发布</text>
+  </view>
+  <view class="tabbar_item" wx:else catchtap="releaseTap">
+    <image src="/images/release.png" />
+    <text>发布</text>
+  </view>
+  <view class="tabbar_item cur" wx:if="{{path=='pages/personal/personal'}}">
+    <image src="/images/my_cur.png" />
+    <text>我的</text>
+  </view>
+  <view class="tabbar_item" wx:else catchtap="personalTap">
+    <image src="/images/my.png" />
+    <text>我的</text>
+  </view>
+</view>

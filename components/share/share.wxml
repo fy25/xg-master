@@ -1,0 +1,4 @@
+<view class="share" catchtap="shareTap">
+  <image src="/images/share.png" />
+  <text>分享</text>
+</view>

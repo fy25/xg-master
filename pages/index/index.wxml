@@ -1,0 +1,88 @@
+<view class="container">
+  <!-- 搜索栏开始 -->
+  <view class="index_search" data-path="../search/search">
+    <view class="index_search_wrapper">
+      <icon type="search" color="#999999" size="15" />
+      <input placeholder="找工作 找房子 找服务" type="text" confirm-type="search" bindconfirm="searchTap"/>
+    </view>
+  </view>
+  <!-- 搜索栏结束 -->
+  <!-- banner开始 -->
+  <view class="banner">
+    <view class="banner_wrapper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}"
+        interval="4000" duration="{{duration}}">
+        <block wx:for="{{topAdsense}}" wx:key="*">
+          <swiper-item data-src="{{item.linkUrl}}" catchtap="bannerTap">
+            <image src="{{item.imgUrl}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <!-- banner结束 -->
+  <!-- tab开始 -->
+  <view class="tab">
+    <view class="tab_item" wx:for="{{tabList}}" wx:key="*" data-path="{{item.path}}" catchtap="goWhere">
+      <image src="{{item.icon}}" />
+      <text>{{item.text}}</text>
+    </view>
+  </view>
+  <!-- tab结束 -->
+  <!-- 徐钢动态开始 -->
+  <view class="index_dynamic">
+    <view class="index_dynamic_tit">
+      <text class="index_dynamic_tit_black">徐钢动态</text>
+      <text class="index_dynamic_tit_more" data-path="/pages/dynamic/dynamic" catchtap="goWhere">查看更多+</text>
+    </view>
+    <view class="index_dynamic_list">
+      <dynamic wx:for="{{newlist}}" wx:key="*" dynamic_id="{{item.id}}" newTit="{{item.title}}" newDate="{{item.date}}" newClick="{{item.clickRate}}"
+        newImg="{{item.image}}"></dynamic>
+    </view>
+  </view>
+  <!-- 徐钢动态结束 -->
+  <!-- ad开始 -->
+  <view class="banner">
+    <view class="banner_wrapper">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActiveColor}}"
+        interval="5000" duration="{{duration}}">
+        <block wx:for="{{middleAdsense}}" wx:key="*">
+          <swiper-item data-src="{{item.linkUrl}}" catchtap="bannerTap">
+            <image src="{{item.imgUrl}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <!-- ad结束 -->
+  <!-- 首页列表开始 -->
+  <view class="index_product">
+    <view class="index_product_filter">
+      <view class="index_product_filter_item">
+        <picker bindchange="blockChange" value="{{blockindex}}" range="{{blockarray}}">
+          <view class="picker">
+            <text>{{blockarray[blockindex]}}</text>
+            <image src="/images/drop-down.png" />
+          </view>
+        </picker>
+      </view>
+      <view class="index_product_filter_line"></view>
+      <view class="index_product_filter_item">
+        <picker bindchange="typeChange" value="{{typeindex}}" range="{{typearray}}">
+          <view class="picker">
+            <text>{{typearray[typeindex]}}</text>
+            <image src="/images/drop-down.png" />
+          </view>
+        </picker>
+      </view>
+    </view>
+    <view class="index_product_list">
+      <product wx:for="{{productList}}" wx:key="*" headImg="{{item.headImg}}" mobile="{{item.mobile}}" isColletion="{{item.isColletion}}" isLike="{{item.isLike}}"
+        typeName="{{item.typeName}}" name="{{item.name}}" date="{{item.date}}" itemList="{{item.itemList}}" describe="{{item.describe}}"
+        mobile="{{item.mobile}}" imageList="{{item.imageList}}" stickState="{{item.stickState}}" clickRate="{{item.clickRate}}"
+        likeCount="{{item.likeCount}}" product_id="{{item.id}}" block="{{block}}" authenticationState="{{item.authenticationState}}"></product>
+    </view>
+  </view>
+  <!-- 首页列表结束 -->
+</view>
+<tabbar path="{{path}}"></tabbar>

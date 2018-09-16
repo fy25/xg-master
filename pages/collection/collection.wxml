@@ -1,0 +1,15 @@
+<scroll-view scroll-x class="check_tab" scroll-with-animation scroll-left="{{scrollleft}}">
+  <view class="check_tab_item" wx:for="{{tabList}}" wx:key="*" catchtap="tabTap" data-index="{{index}}">
+    <view class="check_tab_item_wrapper {{_num==index?'check_tab_item_wrapper_cur':''}}">{{item.text}}</view>
+  </view>
+</scroll-view>
+<view class="product_list">
+  <view class="product_list_wrapper">
+    <product wx:for="{{productList}}" wx:key="*" likeCount="{{item.likeCount}}" isLike="{{item.isLike}}" isColletion="{{1}}"
+      block="{{block}}" headImg="{{item.headImg}}" typeName="{{item.typeName}}" name="{{item.name}}" date="{{item.date}}" itemList="{{item.itemList}}"
+      describe="{{item.describe}}" mobile="{{item.mobile}}" imageList="{{item.imageList}}" stickState="{{item.stickState}}"
+      clickRate="{{item.clickRate}}" salaryName="{{item.salaryName}}" positionName="{{item.positionName}}" product_id="{{item.id}}"
+      authenticationState="{{item.authenticationState}}"></product>
+  </view>
+  <more></more>
+</view>

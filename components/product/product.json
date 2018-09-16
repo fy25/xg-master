@@ -1,0 +1,9 @@
+{
+  "component": true,
+  "usingComponents": {
+    "look": "../look/look",
+    "praise": "../praise/praise",
+    "collection": "../collection/collection",
+    "share": "../share/share"
+  }
+}

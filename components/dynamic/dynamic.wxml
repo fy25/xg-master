@@ -1,0 +1,13 @@
+<view class="dynamic" data-id="{{dynamic_id}}" catchtap="detailTap">
+  <image src="{{newImg}}" />
+  <view class="dynamic_info">
+    <view class="dynamic_tit">{{newTit}}</view>
+    <view class="dynamic_bottom">
+      <view>{{newDate}}</view>
+      <view class="dynamic_view">
+        <image src="/images/view.png" />
+        <text>{{newClick}}</text>
+      </view>
+    </view>
+  </view>
+</view>

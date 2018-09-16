@@ -1,0 +1,12 @@
+<view>
+  <view class="index_dynamic">
+    <view class="index_dynamic_tit">
+      <text class="index_dynamic_tit_black">徐钢动态</text>
+      <text class="index_dynamic_tit_more"></text>
+    </view>
+    <view class="index_dynamic_list">
+      <dynamic wx:for="{{newlist}}" wx:key="*" dynamic_id="{{item.id}}" newTit="{{item.title}}" newDate="{{item.date}}" newClick="{{item.clickRate}}" newImg="{{item.image}}"></dynamic>
+    </view>
+  </view>
+  <more></more>
+</view>

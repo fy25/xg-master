@@ -1,0 +1,24 @@
+<view class="login">
+  <view class="login_top">
+    <image src="/images/logo.png" />
+    <view class="login_line"></view>
+    <text>徐钢生活圈</text>
+  </view>
+  <view class="login_wrapper">
+    <view class="login_item">
+      <image src="/images/user.png"></image>
+      <input type="number" placeholder-class="placeholder" maxlength="11" placeholder="请输入手机号" bindinput="telTap" />
+    </view>
+    <view class="login_item">
+      <image src="/images/lock.png"></image>
+      <input type="password" placeholder-class="placeholder" placeholder="请输入密码" bindinput="pswTap" />
+    </view>
+  </view>
+  <view class="login_forget">
+    <text catchtap="goWhere" data-path="/pages/forget/forget">忘记密码？</text>
+    <text catchtap="goWhere" data-path="/pages/sign_up/sign_up">手机号注册</text>
+  </view>
+  <view class="login_btn">
+    <button open-type="getUserInfo" bindgetuserinfo="onGotUserInfo" catchtap="loginTap">立即登录</button>
+  </view>
+</view>

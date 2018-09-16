@@ -1,0 +1,39 @@
+<view class="product_show">
+  <view class="ad" catchtap="showTap" data-src="{{src}}">
+    <image src="{{ad}}" />
+  </view>
+  <view class="product_show_item">
+    <product navigate="1" isColletion="{{item.isColletion}}" isLike="{{item.isLike}}" likeCount="{{item.likeCount}}" mobile="{{item.mobile}}"
+      block="{{block}}" headImg="{{item.headImg}}" typeName="{{item.typeName}}" name="{{item.name}}" date="{{item.date}}" itemList="{{item.itemList}}"
+      describe="{{item.describe}}" mobile="{{item.mobile}}" imageList="{{item.imageList}}" stickState="{{item.stickState}}"
+      clickRate="{{item.clickRate}}" salaryName="{{item.salaryName}}" positionName="{{item.positionName}}" product_id="{{id}}"
+      acreage="{{item.acreage}}" houseDecorationTypeName="{{item.houseDecorationTypeName}}" sellPrice="{{item.sellPrice}}"
+      bedroomCount="{{item.bedroomCount}}" parlourCount="{{item.parlourCount}}" toiletCount="{{item.toiletCount}}" location="{{item.location}}"
+      departurePlace="{{item.departurePlace}}" destination="{{item.destination}}" rideTime="{{item.rideTime}}" rideCount="{{item.rideCount}}"
+      authenticationState="{{item.authenticationState}}"></product>
+  </view>
+  <view class="product_show_recommend">
+    <view class="product_show_recommend_tit">为您推荐</view>
+    <product wx:for="{{recInfoList}}" wx:key="*" headImg="{{item.headImg}}" mobile="{{item.mobile}}" isColletion="{{item.isColletion}}"
+      isLike="{{item.isLike}}" typeName="{{item.typeName}}" name="{{item.name}}" date="{{item.date}}" itemList="{{item.itemList}}"
+      describe="{{item.describe}}" mobile="{{item.mobile}}" imageList="{{item.imageList}}" stickState="{{item.stickState}}"
+      clickRate="{{item.clickRate}}" likeCount="{{item.likeCount}}" product_id="{{item.id}}" block="{{block}}" authenticationState="{{item.authenticationState}}"></product>
+  </view>
+  <view class="product_show_bottom">
+    <view class="product_show_bottom_left">
+      <view class="product_show_bottom_left_item" catchtap="goHome">
+        <image src="/images/home_cur.png"></image>
+        <text class="product_show_bottom_left_item_red">首页</text>
+      </view>
+      <view class="product_show_bottom_left_item" catchtap="goRelease">
+        <image src="/images/handup.png"></image>
+        <text>发布</text>
+      </view>
+    </view>
+    <view class="product_show_bottom_right" data-tel="{{item.mobile}}" catchtap="telTap">
+      <image src="/images/phone.png"></image>
+      <text>联系TA</text>
+    </view>
+  </view>
+</view>
+<!-- <tabbar path="{{path}}"></tabbar> -->

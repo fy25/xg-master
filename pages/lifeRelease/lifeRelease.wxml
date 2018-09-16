@@ -1,0 +1,66 @@
+<view class="release_main">
+  <picker bindchange="changeSalary" value="{{lifeIndex}}" range="{{lefeText}}">
+    <view class="release_main_item">
+      <view class="release_main_item_left">
+        <text>行业</text>
+        <text>{{lefeText[lifeIndex]}}</text>
+      </view>
+      <view class="release_main_item_right">
+        <image src="/images/right.png"></image>
+      </view>
+    </view>
+  </picker>
+  <view class="description">
+    <view class="description_tit">描述</view>
+    <view class="description_wrapper">
+      <textarea placeholder="介绍服务内容，为了保护隐私，请不要填写手机或QQ" bindinput="describeTap" maxlength="500"></textarea>
+    </view>
+  </view>
+  <!-- 上传照片开始 -->
+  <view class="upload_pic">
+    <view class="upload_pic_list">
+      <view class="upload_pic_item" wx:for="{{tempFilePaths}}" wx:key="*">
+        <image src="{{item}}" />
+        <image class="deleimg" data-index="{{index}}" src="/images/clear.png" catchtap="delTap" />
+      </view>
+      <view class="upload_pic_item" hidden="{{len==9}}" catchtap="imgTap">
+        <image src="/images/camera.png" />
+      </view>
+    </view>
+    <view class="upload_pic_list">
+      <text>添加照片，最多9张</text>
+    </view>
+  </view>
+  <!-- 上传照片结束 -->
+  <view class="release_main_item">
+    <view class="release_main_item_left">
+      <text>联系人</text>
+      <input type="text" placeholder="请输入联系人姓名" bindinput="nameTap" />
+    </view>
+    <view class="release_main_item_right">
+    </view>
+  </view>
+  <view class="release_main_item">
+    <view class="release_main_item_left">
+      <text>电话</text>
+      <input type="number" maxlength="11" placeholder="请输入联系人电话" bindinput="telTap" />
+    </view>
+    <view class="release_main_item_right">
+    </view>
+  </view>
+  <view class="release_tk" catchtap="readTap">
+    <view class="release_tk_left">发布条款</view>
+    <view class="release_tk_right">
+      <image src="/images/right-f_cur.png" hidden="{{!read}}" />
+      <view class="release_tk_right_circle" hidden="{{read}}"></view>
+      <text class="release_tk_right_admin">已阅读，并同意</text>
+      <text class="release_tk_right_info" catchtap="xzTap">【发布须知】</text>
+    </view>
+  </view>
+  <view class="release_main_bottom">
+    <view class="release_main_bottom_tips orange">禁止远程办公、网赚、网络兼职、微商、刷单在此栏目发布，否则一概删除！</view>
+    <view class="release_main_bottom_btn">
+      <button catchtap="submitTap" disabled="{{!read}}">立即发布</button>
+    </view>
+  </view>
+</view>

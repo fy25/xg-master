@@ -1,0 +1,6 @@
+.more{
+  font-size: 24rpx;
+  color: #999999;
+  text-align: center;
+  padding: 16rpx 0;
+}

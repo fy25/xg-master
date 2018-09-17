@@ -1,6 +1,7 @@
 // 作者：fengyu
 // 时间2018.08
 // 徐州东南钢铁
+// 我是一个粉刷匠粉刷本领强
 
 
 import { Base } from '../../utils/base.js';

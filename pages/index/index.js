@@ -1,3 +1,8 @@
+// 作者：fengyu
+// 时间2018.08
+
+
+
 import { Base } from '../../utils/base.js';
 const app = getApp();
 const util = require('../../utils/util.js');
